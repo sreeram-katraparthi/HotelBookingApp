@@ -1,0 +1,16 @@
+<template>
+    <div class="topbar"></div>
+    <div class="slds-card listview slds-p-around_small">
+        <div class="scrollable-view">
+            <template if:true={searchData}>
+                <template for:each={searchData} for:item="hotel">
+                    <div key={hotel.Id} class="slds-p-around_medium">
+                        <c-hotel-details hotelbooking={hotel} onbookingevt={handleBookingEvent}></c-hotel-details>
+                    </div>
+                </template> 
+            </template>
+        </div>
+    </div>
+    <c-hotel-Model>
+    </c-hotel-Model>
+</template>

@@ -1,0 +1,31 @@
+<template>
+   
+    <div class="slds-card">
+        <br></br>
+        <h1 align="center" style="font-size:20px"><b>Hotel Booking</b></h1>
+       
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+              <span><lightning-combobox label="Location" value={location} options={locationoptions}
+                onchange={handleLocationChange}></lightning-combobox></span>
+            </div>
+            <div class="slds-col">
+              <span> <lightning-combobox label="Rating" value={rating} options={ratingoptions}
+                onchange={handleRatingChange}></lightning-combobox></span>
+            </div>
+            <div class="slds-col">
+              <span><lightning-combobox label="Type" value={type} options={typeoptions}
+                onchange={handlTypeChange}></lightning-combobox>  </span>
+            </div>
+          </div>
+          <div class="slds-container slds-p-around_large">
+            <div class="slds-align_absolute-center slds-p-around_medium">
+                <lightning-button label="Search Hotel" variant="brand"
+                    class="button-card" onclick={showHotels}>
+                </lightning-button>
+            </div> 
+           
+        </div>
+    </div>
+ 
+</template>
